@@ -23,7 +23,7 @@ admission_controller:
   webhook_name: datadog-webhook
 aggregator_buffer_size: 100
 aggregator_stop_timeout: 2
-api_key: 86b8d5c8f0ee2bef9f788d5d99105e34
+api_key: <YOUR_DD_API_KEY>
 apm_config:
   enabled: true
   receiver_port: 8126
