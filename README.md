@@ -1,6 +1,10 @@
 # Azure Stack HCI with AKS and Datadog
 Steps to recreate an Azure Stack HCI homelab with AKS and Datadog Network Monitoring
 
+## Manual Steps
+
+The following describes the manual install you'd do on a host/server prior to imaging if using a traditional "golden image" workflow:
+
 Windows Host Script for *BETA* NPM-Enabled Datadog Agent
 ```powershell
 client = new-object System.Net.WebClient
@@ -11,3 +15,5 @@ notepad c:\ProgramData\Datadog\datadog.yaml
 notepad c:\ProgramData\Datadog\system-probe.yaml
 restart-service -f datadogagent
 ```
+
+For WIM-based setups, most of this can (and should!) be scripted. The System Probe and Datadog YAML files in this repo can be used as a starting point, but you'll probably want to create your own bootstrap fils and scripts in a private location.
